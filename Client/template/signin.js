@@ -8,6 +8,15 @@ Template.signin.events({
     password.toString();
     var passwordconfirm = t.find('#submit-passwordconfirm').value;
     var name = t.find('#submit-usrname').value;
+    var pro = t.find('#pro').checked;
+    var stu = t.find('#stu').checked;
+    var jobs;
+    if(pro == true)jobs = "pro";
+    else if(stu == true)jobs = "stu";
+    else if(stu == false && pro == false){
+        Materialize.toast('직업이 선택되지 않았습니다.');
+        return false;
+    }
         if(password != passwordconfirm){
             Materialize.toast('비밀번호가 일치하지 않습니다.');
             t.find('#submit-password').value = '';
@@ -20,6 +29,7 @@ Template.signin.events({
         profile: {
             name: name,
             nickname: nickname,
+            jobs: jobs,
             },
         };
 

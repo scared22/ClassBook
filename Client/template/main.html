@@ -1,7 +1,9 @@
 <template name ="main">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">가입자</a>
+        {{#if currentUser}}
+            <a href="#" class="brand-logo right">{{cuser}}</a>
+        {{/if}}
         <ul id="nav-mobile" class="left">
           <li><a href="">글쓰기</a></li>
           <li><a href="">강의신청</a></li>
