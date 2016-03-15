@@ -1,13 +1,13 @@
 <template name ="main">
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">회원정보</a></li>
+        <li><a href="#!">로그아웃</a></li>
+    </ul>
     <nav>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">회원정보</a></li>
-            <li><a href="#!">로그아웃</a></li>
-        </ul>
-        {{#if currentUser}}
-            <a class="dropdown-button right" href="#!" data-activates="dropdown1">{{cuser}}</a>
-        {{/if}}
       <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right">
+            <a class="dropdown-button" href="#!" data-activates="dropdown1">{{cuser}}<i class="material-icons right">arrow_drop_down</i></a>
+        </ul>
         <ul id="nav-mobile" class="left">
           <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
           <li><a href="">강의신청</a></li>
