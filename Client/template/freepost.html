@@ -5,6 +5,11 @@
         </div>
     </nav>
     <div class="row"></div>
+    <div class="row s12">
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+    </div>
     <div class="row">
         <a href="{{pathFor route='write'}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">mode_edit</i></a>
     </div>

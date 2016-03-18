@@ -7,10 +7,12 @@ Template.write.events({
         e.preventDefault();
         var post ={
             part:t.find('#Classification').value,
-            content:t.find('#textarea1').value
+            content:t.find('#textarea1').value,
+            postuser:Meteor.user().profile.nickname
         };
         if(post.content ==0)Materialize.toast('제목 또는 내용을 입력 해주세요',1000);
-        //post._id = Posts.insert(post);
+        post._id = Posts.insert(post);
+        console.log(post.postuser);
         Materialize.toast('등록 완료!',1000);
         if(post.part == 1) Router.go('freepost');
         else Router.go('main');
