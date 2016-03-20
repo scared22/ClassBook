@@ -5,7 +5,7 @@
             {{#if myPost}}<i class="small material-icons right"><p id="postdel">delete</p></i>{{/if}}<br>
             <span class="blue-text text-darken-2"><h3>{{content}}</h3></span><br>
             {{#if currentUser}}<span class="blue-text text-darken-2">댓글</span>{{/if}}
-            {{#if myPost}}<span class="blue-text text-darken-2">수정</span>{{/if}}
+            {{#if myPost}}<span class="blue-text text-darken-2"><a href="{{pathFor route='postEdit'}}">수정</a></span>{{/if}}
         </div>
     </div>
 </template>
