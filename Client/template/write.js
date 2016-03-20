@@ -11,10 +11,14 @@ Template.write.events({
             postuser:Meteor.user().profile.nickname
         };
         if(post.content ==0)Materialize.toast('제목 또는 내용을 입력 해주세요',1000);
-        post._id = Posts.insert(post);
-        console.log(post.postuser);
-        Materialize.toast('등록 완료!',1000);
-        if(post.part == 1) Router.go('freepost');
-        else Router.go('main');
+        Meteor.call('postInsert',post,function(error,result){
+            if(error) return alert(error.reason);
+            else {
+                Materialize.toast('등록 완료!',1000);
+                if(post.part == 1) Router.go('freepost');
+                else Router.go('main');
+            }
+        });
+
     }
 });

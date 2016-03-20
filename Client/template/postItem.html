@@ -3,7 +3,8 @@
         <div class="card-panel grey lighten-2 col s7 offset-s3">
             <span class="blue-text text-darken-2">{{postuser}}</span><br>
             <span class="blue-text text-darken-2"><h3>{{content}}</h3></span><br>
-            <span class="blue-text text-darken-2">댓글</span>
+            {{#if currentUser}}<span class="blue-text text-darken-2">댓글</span>{{/if}}
+            {{#if myPost}}<span class="blue-text text-darken-2">수정</span>{{/if}}
         </div>
     </div>
 </template>
