@@ -10,7 +10,7 @@ Template.postEdit.events({
             content:t.find('#textarea1').value
         }
         if(postProperties.content == 0){
-            Materialize.toast('빈글을 작성 할 수 없습니다.');
+            Materialize.toast('빈글을 작성 할 수 없습니다.',1000);
             return false;
         }
         Posts.update(currentPostId,{$set: postProperties},function(error){

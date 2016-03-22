@@ -1,7 +1,7 @@
 <template name ="freepost">
     <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">자유게시판</a>
+          <a href="#" class="brand-logo center">자유대화함</a>
         </div>
     </nav>
     <div class="row"></div>
@@ -10,7 +10,7 @@
             {{> postItem}}
         {{/each}}
     </div>
-    <div class="row">
+    <div style="display:block;position:fixed;bottom:5px;right:5px;">
         <a href="{{pathFor route='write'}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">mode_edit</i></a>
     </div>
 </template>
