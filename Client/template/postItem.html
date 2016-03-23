@@ -3,7 +3,8 @@
         <div class="col s7 offset-s3">
             {{#if myPost}}<i class="small material-icons right"><p id="postdel">delete</p></i>{{/if}}<br>
             <span class="blue-text text-darken-2"><h3>{{content}}</h3></span><br>
-            <i class="material-icons">perm_identity</i><span class="blue-text text-darken-2">{{postuser}}</span>
+            <i class="material-icons">today</i><span class="blue-text text-darken-2">{{submitted}}</span>
+            &nbsp;&nbsp;&nbsp;<i class="material-icons">perm_identity</i><span class="blue-text text-darken-2">{{postuser}}</span>
             &nbsp;&nbsp;&nbsp;<i class="material-icons">comment</i>{{#if currentUser}}<span class="blue-text text-darken-2">댓글</span>{{/if}}
             &nbsp;&nbsp;&nbsp;{{#if myPost}}<span class="blue-text text-darken-2"><a href="{{pathFor route='postEdit'}}">수정</a></span>{{/if}}
             <hr class="two">
