@@ -5,7 +5,7 @@
             <span class="blue-text text-darken-2"><h3>{{content}}</h3></span><br>
             <i class="material-icons">today</i><span class="blue-text text-darken-2">{{submitted}}</span>&nbsp;&nbsp;&nbsp;
             <i class="material-icons">perm_identity</i><span class="blue-text text-darken-2">{{postuser}}</span>&nbsp;&nbsp;&nbsp;
-            <i class="material-icons"><a href="{{pathFor route='postComment'}}">comment</a></i>{{#if currentUser}}{{/if}}&nbsp;&nbsp;&nbsp;
+            <i class="material-icons"><a href="{{pathFor route='postComment'}}">comment</a></i>{{commentsCount}}&nbsp;&nbsp;&nbsp;
             {{#if myPost}}<span class="blue-text text-darken-2"><a class="modal-trigger" href="#modal1">수정</a></span>{{/if}}
             <hr class="two">
             <div id="modal1" class="modal modal-fixed-footer">

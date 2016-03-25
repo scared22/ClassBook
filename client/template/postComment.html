@@ -10,20 +10,16 @@
             <span class="blue-text text-darken-2"><h3>{{content}}</h3></span><br>
             <i class="material-icons">today</i><span class="blue-text text-darken-2">{{submitted}}</span>&nbsp;&nbsp;&nbsp;
             <i class="material-icons">perm_identity</i><span class="blue-text text-darken-2">{{postuser}}</span>&nbsp;&nbsp;&nbsp;
-            <i class="material-icons"><a href="{{pathFor route='postComment'}}">comment</a></i>{{#if currentUser}}{{/if}}&nbsp;&nbsp;&nbsp;
+            <i class="material-icons"><a href="{{pathFor route='postComment'}}">comment</a></i>{{commentsCount}}&nbsp;&nbsp;&nbsp;
             <hr class="two">
         </div>
     </div>
     <div class="row">
-        <div class="col s8 offset-s3">
-            <div class="col s8 offset">
-                <div class="input-field">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">댓글 내용을 입력해주세요.</label>
-                </div>
-            </div>
-                <a class="waves-effect waves-light btn">등록</a>
-        </div>
+        {{> submitComment}}
+    </div>
+    <div class="row col s7 offset-s3">
+        {{#each comments}}
+            {{> commentItem}}
+        {{/each}}
     </div>
 </template>

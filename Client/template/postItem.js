@@ -6,6 +6,9 @@ Template.postItem.helpers({
     myPost: function(){
         return this.userId === Meteor.userId();
     },
+    commentsCount : function(){
+        return Comments.find({postId:this._id}).count();
+    }
 });
 Template.postItem.events({
     'click #postdel':function(e,t){
@@ -26,7 +29,7 @@ Template.postItem.events({
         Posts.update(currentPostId,{$set: postProperties},function(error){
             if(error){
                 alert(error.reason);
-            } 
+            }
         });
     }
 });
