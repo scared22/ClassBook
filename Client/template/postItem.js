@@ -1,6 +1,11 @@
 Template.postItem.onRendered(function(){
-    $('.modal-trigger').leanModal();
-    $('input#input_text, textarea#textarea1').characterCounter();
+    $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+        complete: function() {$('#modal1').closeModal();} // Callback for Modal close
+    });
 });
 Template.postItem.helpers({
     myPost: function(){
@@ -27,9 +32,7 @@ Template.postItem.events({
             return false;
         }
         Posts.update(currentPostId,{$set: postProperties},function(error){
-            if(error){
-                alert(error.reason);
-            }
+            if(error) alert(error.reason);
         });
     }
 });
