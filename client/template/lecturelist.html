@@ -1,0 +1,22 @@
+<template name="lecturelist">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">강의신청</a>
+        </div>
+    </nav>
+    <table class="striped centered">
+        <thead>
+          <tr>
+              <th data-field="id">과목명</th>
+              <th data-field="name">교수</th>
+              <th data-field="classification">전공분류</th>
+              <th data-field="price">신청</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each lectures}}
+                {{> lectureform}}
+            {{/each}}
+        </tbody>
+      </table>
+</template>
