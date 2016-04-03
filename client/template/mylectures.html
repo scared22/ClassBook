@@ -5,16 +5,18 @@
         </div>
     </nav>
     <div class="row">
-        <table>
+        <table class="centered">
             <thead>
                 <tr>
                     <th data-field="id">과목명</th>
                     <th data-field="name">전공분류</th>
-                    <th data-field="price">학생수</th>
+                    <th data-field="price">강의편집</th>
                 </tr>
             </thead>
             <tbody>
-
+                {{#each lectures}}
+                    {{>mylectureform}}
+                {{/each}}
             </tbody>
         </table>
     </div>

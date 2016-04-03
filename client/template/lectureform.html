@@ -6,3 +6,41 @@
         <td><a class="waves-effect waves-light btn">신청</a></td>
     </tr>
 </template>
+<template name ="mylectureform">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{major}}</td>
+        <td>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">수정</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a id ="lecture-del" class="waves-effect waves-light btn">삭제</a>
+        </td>
+    </tr>
+    <div id="modal1" class="modal modal-fixed-footer">
+        <nav>
+            <div class="nav-wrapper">
+              <a class="brand-logo center">강의수정</a>
+            </div>
+        </nav>
+        <div class="modal-content">
+          <center><h4>강의목록을 수정해주세요.</h4></center>
+            <div class="input-field col s8 offset-s2">
+                <select id ="lecture-Classification">
+                    <option value="" disabled selected>과목분류를 선택해주세요.</option>
+                    <option value="1">일반선택</option>
+                    <option value="2">교양선택</option>
+                    <option value="3">전공선택</option>
+                    <option value="4">전공필수</option>
+                </select>
+                <label>과목분류</label>
+            </div>
+            <div class="input-field col s8 offset-s2">
+                <textarea id="textarea1" value=' ' class="materialize-textarea" length="120"></textarea>
+                <label for="textarea1">과목명</label>
+            </div>
+          </div>
+           <div class="modal-footer">
+               <a id="lecture-edit" class="modal-action modal-close waves-effect waves-green btn-flat">확인</a>
+               <a class="modal-action modal-close waves-effect waves-green btn-flat">취소</a>
+           </div>
+    </div>
+</template>
