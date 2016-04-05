@@ -1,0 +1,24 @@
+<template name ="main">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">뉴스피드</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
+          <li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>
+          <li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>
+          <li><a href="">수강목록</a></li>
+          <li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo" style="transform:translateX(0px);">
+            <li><img src="/images/minilogo.png"></li>
+            <li><a href="{{pathFor route='write'}}"><h5>글쓰기</h5></a></li>
+            <li><a href="{{pathFor route='lecturelist'}}"><h5>강의신청</h5></a></li>
+            <li><a href="{{pathFor route='lecturesignin'}}"><h5>강의등록</h5></a></li>
+            <li><a href=""><h5>수강목록</h5></a></li>
+            <li><a href="{{pathFor route='mylectures'}}"><h5>강의목록</h5></a></li>
+            <li><a class="btn waves-effect waves-light" id="logout"><h5>로그아웃</h5></a></li>
+        </ul>
+      </div>
+    </nav>
+</template>
