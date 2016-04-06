@@ -7,6 +7,16 @@ Template.main.onRendered(function() {
 Template.main.helpers({
     cuser: function(){
         return Meteor.user().profile.nickname;
+    },
+    Isprofessor: function(){
+        var usr = Meteor.user().profile.jobs;
+        if(usr =='pro')return true;
+        else return false;
+    },
+    Isstudent: function(){
+        var usr = Meteor.user().profile.jobs;
+        if(usr == 'stu')return true;
+        else return false;
     }
 });
 Template.main.events({

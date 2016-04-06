@@ -5,20 +5,20 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
-          <li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>
-          <li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>
-          <li><a href="">수강목록</a></li>
-          <li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>
+          {{#if Isstudent}}<li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>{{/if}}
+          {{#if Isprofessor}}<li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>{{/if}}
+          {{#if Isstudent}}<li><a href="">수강목록</a></li>{{/if}}
+          {{#if Isprofessor}}<li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>{{/if}}
           <li><a href="{{pathFor route='freepost'}}">자유대화함</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo" style="transform:translateX(0px);">
             <li><img src="/images/minilogo.png"></li>
             <li><center><a><h3>{{cuser}}</h3></a></center></li>
             <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
-            <li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>
-            <li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>
-            <li><a href="">수강목록</a></li>
-            <li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>
+            {{#if Isstudent}}<li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>{{/if}}
+            {{#if Isprofessor}}<li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>{{/if}}
+            {{#if Isstudent}}<li><a href="">수강목록</a></li>{{/if}}
+            {{#if Isprofessor}}<li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>{{/if}}
             <li><a href="{{pathFor route='freepost'}}">자유대화함</a></li>
             <li><a>내정보</a></li>
             <li><a class="btn waves-effect waves-light" id="logout">로그아웃</a></li>
