@@ -4,7 +4,6 @@ Template.postItem.onRendered(function(){
         opacity: .5, // Opacity of modal background
         in_duration: 300, // Transition in duration
         out_duration: 200, // Transition out duration
-        complete: function() {$('#modal1').closeModal();} // Callback for Modal close
     });
 });
 Template.postItem.helpers({

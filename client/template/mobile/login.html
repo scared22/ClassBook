@@ -1,11 +1,10 @@
 <template name = "login">
       <div class="row">
+          <div class="col s12 m6 offset-m3 mobile-login-img">
+              <img src ="/images/mainlogo1.png" style ="50%;">
+          </div>
+      </div>
         <form class="col s12">
-            <div class ="row">
-                <div class="col s12 m6 offset-m2 mobile-login-img">
-                    <img src ="/images/mainlogo.png" style ="80%" align="middle">
-                </div>
-            </div>
             <div class="row">
                 <div class="input-field col s12 m3 offset-m4">
                   <i class="material-icons prefix">account_circle</i>
@@ -21,15 +20,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field3 col s12 m3 offset-m5">
+                <div class="input-field3 col s12 offset-s4 m3 offset-m5">
                     <a id="login" class="waves-effect waves-light btn-large">로그인</a>
                 </div>
             </div>
             <div class="row">
-                <div class="row mobile-login-notid col s12 m3 offset-m5">
+                <div class="row mobile-login-notid col s12 offset-s4 m3 offset-m5">
                      <a class="mobile-login-signup" href="{{pathFor route='signin'}}">회원이 아니신가요?</a>
                 </div>
             </div>
         </form>
-      </div>
 </template>
