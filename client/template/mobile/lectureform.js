@@ -36,3 +36,16 @@ Template.mylectureform.events({
         });
     }
 });
+Template.lectureform.helpers({
+    isStundet : function(){
+        var user = Meteor.user();
+        var job = user.profile.jobs;
+        if(job == 'stu')return true;
+        else return false;
+    },
+    isApplied : function(){
+        var lectures = Meteor.user().profile.lectures;
+        if($.inArray(this._id,lectures)>-1) return true;
+        else return false;
+    }
+});

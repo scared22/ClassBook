@@ -1,9 +1,15 @@
 <template name ="lectureform">
       <tr>
-        <td>{{name}}</td>
-        <td>{{professor}}</td>
-        <td>{{major}}</td>
-        <td><a class="waves-effect waves-light btn">신청</a></td>
+        <td id ="lecture-title">{{name}}</td>
+        <td id ="lecture-name">{{professor}}</td>
+        <td id ="lecture-major">{{major}}</td>
+        {{#if isStundet}}
+        {{#unless isApplied}}
+            <td><a id ={{_id}} class="apply-lecture waves-effect waves-light btn">신청</a></td>
+        {{else}}
+            <td><a class="waves-effect pink lighten-1 btn">신청완료</a></td>
+        {{/unless}}
+        {{/if}}
     </tr>
 </template>
 <template name ="mylectureform">

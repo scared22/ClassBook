@@ -7,7 +7,7 @@
           <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
           {{#if Isstudent}}<li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>{{/if}}
           {{#if Isprofessor}}<li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>{{/if}}
-          {{#if Isstudent}}<li><a href="">수강목록</a></li>{{/if}}
+          {{#if Isstudent}}<li><a href="{{pathFor route = 'studentlectures'}}">수강목록</a></li>{{/if}}
           {{#if Isprofessor}}<li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>{{/if}}
           <li><a href="{{pathFor route='freepost'}}">자유대화함</a></li>
         </ul>
@@ -17,7 +17,7 @@
             <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
             {{#if Isstudent}}<li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>{{/if}}
             {{#if Isprofessor}}<li><a href="{{pathFor route='lecturesignin'}}">강의등록</a></li>{{/if}}
-            {{#if Isstudent}}<li><a href="">수강목록</a></li>{{/if}}
+            {{#if Isstudent}}<li><a href="{{pathFor route = 'studentlectures'}}">수강목록</a></li>{{/if}}
             {{#if Isprofessor}}<li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>{{/if}}
             <li><a href="{{pathFor route='freepost'}}">자유대화함</a></li>
             <li><a>내정보</a></li>

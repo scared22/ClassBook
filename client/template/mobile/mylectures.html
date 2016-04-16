@@ -1,7 +1,7 @@
 <template name ="mylectures">
     <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">강의목록</a>
+            <a href="#" class="brand-logo center">강의목록</a>
         </div>
     </nav>
     <div class="row">
@@ -17,6 +17,27 @@
                 {{#each lectures}}
                     {{>mylectureform}}
                 {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+<template name ="studentlectures">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">수강목록</a>
+        </div>
+    </nav>
+    <div class="row">
+        <table class="centered">
+            <thead>
+                <tr>
+                    <th data-field="id">과목명</th>
+                    <th data-field="name">전공분류</th>
+                    <th data-field="price">수강취소</th>
+                </tr>
+            </thead>
+            <tbody>
+
             </tbody>
         </table>
     </div>
