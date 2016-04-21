@@ -49,3 +49,15 @@ Template.lectureform.helpers({
         else return false;
     }
 });
+Template.stlectureform.events({
+    'click #stlecture-del':function(e){
+        e.preventDefault();
+        if(confirm("삭제하시겠습니까?"))
+        {
+            var currentId = Meteor.userId();
+            var subjectId = this._id;
+            Meteor.users.update({_id:currentId},{$pull:{"profile.lectures":subjectId}});
+            Router.go('studentlectures');
+        }
+    }
+});
