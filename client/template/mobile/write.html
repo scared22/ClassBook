@@ -12,8 +12,9 @@
                      <select id ="Classification">
                          <option value="" disabled selected>목록을 선택해주세요</option>
                          <option value="1">자유대화함</option>
-                         <option value="2">Option 2</option>
-                         <option value="3">Option 3</option>
+                         {{#each lectures}}
+                            {{> category}}
+                         {{/each}}
                      </select>
                      <label>분류</label>
                  </div>
@@ -31,4 +32,7 @@
             <button class="btn waves-effect waves-light" type="submit" id="submit">보내기</button>
         </div>
     </div>
+</template>
+<template name="category">
+    <option value="{{_id}}">{{name}}</option>
 </template>

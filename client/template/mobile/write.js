@@ -18,9 +18,25 @@ Template.write.events({
             else {
                 Materialize.toast('등록 완료!',1000);
                 if(post.part == 1) Router.go('freepost');
-                else Router.go('main');
+                else
+                {
+                    console.log()
+                }
             }
         });
 
+    }
+});
+Template.write.helpers({
+    lectures: function(){
+        var job = Meteor.user().profile.jobs;
+        var lectures = Meteor.user().profile.lectures;
+        if(job === 'stu')
+        {
+            if(lectures)
+                return Lectures.find({_id:{$in: lectures}});
+            else return [];
+        }
+        else return Lectures.find({userId: Meteor.userId()});
     }
 });
