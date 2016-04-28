@@ -25,4 +25,12 @@
         </ul>
       </div>
     </nav>
+    <div class = "row">
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+    </div>
+    <div style="display:block;position:fixed;bottom:5px;right:5px;">
+        <a href="{{pathFor route='write'}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">mode_edit</i></a>
+    </div>
 </template>

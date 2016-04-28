@@ -12,6 +12,14 @@ Template.postItem.helpers({
     },
     commentsCount : function(){
         return Comments.find({postId:this._id}).count();
+    },
+    judgePart: function(){
+        if(this.part == 1)return false;
+        else return true;
+    },
+    lectitle : function(){
+        console.log(Lectures.findOne({_id: this.part}).name);
+        return Lectures.findOne({_id: this.part}).name;
     }
 });
 Template.postItem.events({

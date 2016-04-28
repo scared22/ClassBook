@@ -15,13 +15,11 @@ Template.write.events({
             if(error) return alert(error.reason);
             if(result.postExists)
                 Materialize.toast('이미 등록된 내용이 있습니다.');
-            else {
-                Materialize.toast('등록 완료!',1000);
-                if(post.part == 1) Router.go('freepost');
-                else
-                {
-                    console.log()
-                }
+            else
+            {
+                    Materialize.toast('등록 완료!',1000);
+                    if(post.part == 1) Router.go('freepost');
+                    else Router.go('main');
             }
         });
 
