@@ -18,7 +18,6 @@ Template.postItem.helpers({
         else return true;
     },
     lectitle : function(){
-        console.log(Lectures.findOne({_id: this.part}).name);
         return Lectures.findOne({_id: this.part}).name;
     }
 });
@@ -41,5 +40,6 @@ Template.postItem.events({
         Posts.update(currentPostId,{$set: postProperties},function(error){
             if(error) alert(error.reason);
         });
+        $('.modal-trigger').closeModal();
     }
 });
