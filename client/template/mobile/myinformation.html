@@ -1,0 +1,23 @@
+<template name ="myinformation">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">내 정보</a>
+        </div>
+    </nav>
+    <div class ="row col s12">
+        <br>
+        <center><img src="images/people.png"></center>
+    </div>
+    <div class="row col s12">
+        <div class="col s8 offset-s2">
+            <ul class="collection with-header">
+                <li class="collection-item"><i class="material-icons left">email</i>{{getEmail}}</li>
+                <li class="collection-item"><i class="material-icons left">perm_identity</i>{{getName}}</li>
+                <li class="collection-item"><i class="material-icons left">grade</i>{{getNickname}}</li>
+            </ul>
+        </div>
+        <div>
+            <center><a class="waves-effect waves-light btn"><i class="material-icons left">settings</i>정보수정</a></center>
+        </div>
+    </div>
+</template>
