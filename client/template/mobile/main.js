@@ -30,13 +30,13 @@ Template.main.helpers({
                     lectures = _.map(lectures, function(doc){
                         return doc._id
                     });
-                    return Posts.find({lecture: {$exists: true, $in: lectures}});
+                    return Posts.find({lecture: {$exists: true, $in: lectures}},{sort:{submitted:-1}});
                 }
                 else return [];
             }
             else if(job === 'stu'){
                 var lectures = user.profile.lectures;
-                if(lectures) return Posts.find({lecture: {$exists: true, $in: lectures}});
+                if(lectures) return Posts.find({lecture: {$exists: true, $in: lectures}},{sort:{submitted:-1}});
                 else return [];
             }
             else throw new Meteor.Error('Invalid User Info');

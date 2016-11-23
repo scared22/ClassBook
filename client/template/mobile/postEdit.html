@@ -1,0 +1,26 @@
+<template name="postEdit">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">수정하기</a>
+        </div>
+    </nav>
+    <div class="row">
+      <form class="col s12">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" length="120" value={{content}}></textarea>
+          <label for="textarea1">내용을수정해주세요.</label>
+        </div>
+      </form>
+      <div class="row col s12">
+          <div class="col s6">
+              <center><a class="waves-effect waves-light btn-large" id="postedit">수정하기</a></center>
+          </div>
+          <div class="col s6">
+              <center><a class="waves-effect red btn-large" id="postdel">삭제하기</a></center>
+          </div>
+      </div>
+      <div class="row">
+          <center><a class="waves-effect orange btn-large" href="{{pathFor route='main'}}">취소</a></center>
+      </div>
+    </div>
+</template>

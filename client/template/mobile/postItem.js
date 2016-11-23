@@ -8,7 +8,10 @@ Template.postItem.onRendered(function(){
 });
 Template.postItem.helpers({
     myPost: function(){
-        return this.userId === Meteor.userId();
+        var temp1 = Meteor.userId();
+        var temp2 = Posts.findOne({_id:this._id}).userId;
+        //alert(temp2);
+        return temp1 === temp2;
     },
     commentsCount : function(){
         return Comments.find({postId:this._id}).count();
@@ -19,27 +22,5 @@ Template.postItem.helpers({
     },
     lectitle : function(){
         return Lectures.findOne({_id: this.part}).name;
-    }
-});
-Template.postItem.events({
-    'click #postdel':function(e,t){
-        e.preventDefault();
-        var currentPostId = this._id;
-        Posts.remove(currentPostId);
-    },
-    'click #postedit':function(e,t){
-        e.preventDefault();
-        var currentPostId = this._id;
-        var postProperties ={
-            content:t.find('#textarea1').value
-        }
-        if(postProperties.content == 0){
-            Materialize.toast('빈글을 작성 할 수 없습니다.',1000);
-            return false;
-        }
-        Posts.update(currentPostId,{$set: postProperties},function(error){
-            if(error) alert(error.reason);
-        });
-        $('.modal-trigger').closeModal();
     }
 });
