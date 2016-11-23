@@ -17,7 +17,9 @@ Template.postEdit.events({
         }
         Posts.update(currentPostId,{$set: postProperties},function(error){
             if(error) alert(error.reason);
-            Router.go('main');
+            var part = Posts.findOne({_id:currentPostId}).part;
+            if(part==="1")Router.go('freepost');
+            else Router.go('main');
         });
 
     }
