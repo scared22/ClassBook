@@ -12,3 +12,13 @@ Template.myinformation.helpers({
         return get;
     }
 });
+Template.myinformation.events({
+    'click #cancel':function(e){
+        e.preventDefault();
+        Router.go('main');
+    },
+    'click #edit':function(e){
+        e.preventDefault();
+        Router.go('editinformation');
+    }
+});

@@ -6,7 +6,12 @@ Template.notifications.helpers({
     return Notifications.find({userId: Meteor.userId(), read: false}).count();
   }
 });
-
+Template.notifications.events({
+    'click #cancel':function(e){
+        e.preventDefault();
+        Router.go('main');
+    }
+});
 Template.notificationItem.helpers({
   notificationPostPath: function() {
     return Router.routes.postPage.path({_id: this.postId});

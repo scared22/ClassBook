@@ -22,7 +22,10 @@ Template.write.events({
                     else Router.go('main');
             }
         });
-
+    },
+    'click #cancle':function(e){
+        e.preventDefault();
+        Router.go('main');
     }
 });
 Template.write.helpers({

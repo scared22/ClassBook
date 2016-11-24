@@ -1,0 +1,53 @@
+<template name="editinformation">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">개인정보 수정</a>
+        </div>
+    </nav>
+    <div class ="row col s12">
+        <br>
+        <center><img src="images/people.png"></center>
+    </div>
+    <div class="row">
+    <div class="input-field col s6 offset-s2">
+      {{#if currentUser}}
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="private-name" type="text" value={{userName}}>
+          <label for="private-password">이름</label>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6 offset-s2">
+      {{#if currentUser}}
+          <i class="material-icons prefix">grade</i>
+          <input id="private-nickname" type="text" value={{userNick}}>
+          <label for="private-password">닉네임</label>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6 offset-s2">
+      <i class="material-icons prefix">lock</i>
+      <input id="private-password" type="password">
+      <label for="private-password">비밀번호</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6 offset-s2">
+      <i class="material-icons prefix">lock</i>
+      <input id="private-passwordconfirm" type="password">
+      <label for="private-passwordconfirm">비밀번호 확인</label>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col s12">
+          <div class="col s6">
+              <center><a id="edit" class="waves-effect waves-light btn"><i class="material-icons left">settings</i>정보수정</a></center>
+          </div>
+          <div class="col s6">
+              <center><a id="cancel" class="waves-effect red btn"><i class="material-icons left">exit_to_app</i>나가기</a></center>
+          </div>
+      </div>
+  </div>
+</template>
