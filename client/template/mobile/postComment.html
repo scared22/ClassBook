@@ -8,9 +8,9 @@
     <div class="row">
         <div class ="col 10 offset-s1">
             <span class="blue-text text-darken-2"><h5>{{content}}</h5></span><br>
-            <i class="material-icons">today</i><span class="blue-text text-darken-2">{{submitted}}</span>
-            <i class="material-icons">perm_identity</i><span class="blue-text text-darken-2">{{postuser}}</span>
-            <i class="material-icons"><a href="{{pathFor route='postComment'}}">comment</a></i>{{commentsCount}}
+            <img src="/images/ic_today.png"><span>{{submitted}}</span>
+            <img src="/images/ic_perm.png"><span class="blue-text text-darken-2">{{postuser}}</span>
+            <a href="{{pathFor route='postComment'}}"><img src="/images/ic_comment.png"></a>{{commentsCount}}
             <hr class="two">
         </div>
     </div>

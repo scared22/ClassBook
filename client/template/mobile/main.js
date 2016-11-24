@@ -42,6 +42,9 @@ Template.main.helpers({
             else throw new Meteor.Error('Invalid User Info');
         }
         else Roter.go('login');
+    },
+    notificationCount: function(){
+      return Notifications.find({userId: Meteor.userId(), read: false}).count();
     }
 });
 Template.main.events({

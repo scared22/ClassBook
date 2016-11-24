@@ -1,0 +1,26 @@
+<template name="notifications">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">알림글</a>
+        </div>
+    </nav>
+  <ul>
+    {{#if notificationCount}}
+      {{#each notifications}}
+        {{> notificationItem}}
+      {{/each}}
+    {{else}}
+      <li><span>알림없음</span></li>
+       <hr>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="notificationItem">
+  <li>
+    <a href="{{notificationPostPath}}">
+      <strong>{{commenterName}}</strong>님이(께서) 당신의 글에 댓글을 달았습니다.
+      <hr>
+    </a>
+  </li>
+</template>

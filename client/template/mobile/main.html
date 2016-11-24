@@ -2,7 +2,7 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">뉴스피드</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><img src="/images/ic_menu.png"></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{{pathFor route='write'}}">글쓰기</a></li>
           {{#if Isstudent}}<li><a href="{{pathFor route='lecturelist'}}">강의신청</a></li>{{/if}}
@@ -22,6 +22,7 @@
             {{#if Isprofessor}}<li><a href="{{pathFor route='mylectures'}}">강의목록</a></li>{{/if}}
             <li><a href="{{pathFor route='freepost'}}">자유대화함</a></li>
             <li><a href="{{pathFor route='myinformation'}}">내정보</a></li>
+            <li><a href="{{pathFor route='notifications'}}"><span class="new badge">{{notificationCount}}</span>알림</a></li>
             <li><a class="btn waves-effect waves-light" id="logout">로그아웃</a></li>
         </ul>
       </div>
@@ -32,6 +33,6 @@
         {{/each}}
     </div>
     <div style="display:block;position:fixed;bottom:5px;right:5px;">
-        <a href="{{pathFor route='write'}}" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">mode_edit</i></a>
+        <a href="{{pathFor route='write'}}" class="btn-floating btn-large waves-effect waves-light red right"><img src="/images/ic_mode.png" align="center"></a>
     </div>
 </template>
